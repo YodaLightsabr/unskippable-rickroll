@@ -112,9 +112,12 @@ const html = `<!DOCTYPE html>
                 <h1 style="margin-bottom: 0px;">Give the gift of an</h1>
                 <h1 style="font-size: 60px; margin-top: 0px;">Unskippable Rickroll</h1>
             </center>
-            <pre><code style="display: flex; flex-direction: row;"><span style="padding-right: 20px;">user@localhost ~ $</span><input style="flex-grow: 1; margin-right: 12px; display: inline-block; height: calc(100% - 4px); padding: 10px; padding-bottom: 9px; transform: translate(-2px, 2px); margin: -10px; box-sizing: border-box;" readonly value="curl -sL https://rr.dino.icu | bash" /></code></pre>
+            <pre><code style="display: flex; flex-direction: row;"><span style="padding-right: 20px;">user@localhost ~ $</span><input style="flex-grow: 1; margin-right: 12px; display: inline-block; height: calc(100% - 4px); padding: 10px; padding-bottom: 9px; transform: translate(-2px, 2px); margin: -10px; box-sizing: border-box;" readonly value="..." /></code></pre>
         </div>
     </div>
+    <script>
+        document.querySelector('input').value = \`curl -sL https://\${location.hostname} | bash\`;
+    </script>
 </body>
 </html>`;
 
